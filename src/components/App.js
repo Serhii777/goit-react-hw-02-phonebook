@@ -64,7 +64,6 @@ class App extends Component {
 
     const isNewContactUnique = () => {
       const { contacts } = this.state;
-
       return contacts.find((contact) => contact.name === newContact.name);
     };
 
