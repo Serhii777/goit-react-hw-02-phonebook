@@ -5,8 +5,8 @@ import "./ContactList.css";
 
 const ContactList = ({contacts, onRemoveTask}) => {
   return (
-    <div className="ContactList">
-      <ul className="ContactList-list">
+    <div className="contact-wrapper">
+      <ul className="contact-list">
         {contacts.map(({id, name, number}) => (
           <ContactListItem
           key={id}

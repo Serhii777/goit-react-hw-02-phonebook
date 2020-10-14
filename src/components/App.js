@@ -21,7 +21,7 @@ class App extends Component {
     number: "227-91-26",
   };
 
-  initialState = {
+  state = {
     contacts: [
       { id: "id-1", name: "Rosie Simpson", number: "459-12-56" },
       { id: "id-2", name: "Hermione Kline", number: "443-89-12" },
@@ -33,22 +33,12 @@ class App extends Component {
     number: "",
   };
 
-  state = this.initialState;
-
-  state = {
-    contacts: [],
-    filter: "",
-    name: "",
-    numder: "",
-  };
-
   changeFilter = (filter) => {
     this.setState({ filter });
   };
 
   getVisibleContacts = () => {
     const { contacts, filter } = this.state;
-    // const { contacts, filter } = this.initialState;
 
     return contacts.filter((contact) =>
       contact.name.toLowerCase().includes(filter.toLowerCase())
@@ -97,11 +87,11 @@ class App extends Component {
 
     return (
       <Container>
-        <h1 className="Container-title">Phonebook</h1>
+        <h1 className="container-title">Phonebook</h1>
         <ContactForm onAddContact={this.addContact} />
 
-        <h2 className="Container-title">Contacts</h2>
-        {visibleContacts.length > 1 && (
+        <h2 className="container-title">Contacts</h2>
+        {visibleContacts.length >= 1 && (
           <Filter value={filter} onChangeFilter={this.changeFilter} />
         )}
         {visibleContacts.length > 0 && (

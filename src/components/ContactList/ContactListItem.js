@@ -3,12 +3,12 @@ import PropTypes from "prop-types";
 
 const ContactListItem = ({ name, number, onRemove }) => {
   return (
-    <li className="ContactList-item">
-      <p className="ContactList-name">{name}:</p>
-      <span className="ContactList-number">{number}</span>
+    <li className="contact-item">
+      <p className="contact-name">{name}:</p>
+      <span className="contact-number">{number}</span>
       <button
         type="button"
-        className="ContactList-button"
+        className="contact-button"
         onClick={onRemove}
       >
         Delete

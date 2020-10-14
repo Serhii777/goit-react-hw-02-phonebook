@@ -1,4 +1,4 @@
-.Container {
+.container {
     max-width: 500px;
     min-height: 400px;
     background-color: rgb(218, 247, 250);
@@ -10,6 +10,6 @@
     padding: 30px 10px 10px;
 }
 
-.Container-title{
+.container-title{
     margin: 0px 0px 30px 0px;
 }
