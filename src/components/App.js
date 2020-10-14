@@ -92,7 +92,10 @@ class App extends Component {
 
         <h2 className="container-title">Contacts</h2>
         {visibleContacts.length >= 1 && (
-          <Filter value={filter} onChangeFilter={this.changeFilter} />
+          <Filter
+            value={filter}
+            onChangeFilter={this.changeFilter}
+          />
         )}
         {visibleContacts.length > 0 && (
           <ContactList
